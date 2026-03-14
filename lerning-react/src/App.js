@@ -1,10 +1,9 @@
-import VideoList from './components/VideoList';
+import TextLinkExample from "./components/Navbar.js";
 
 function App() {
   return (
     <>
-      <h1>App compoent</h1>
-      <VideoList />
+      <TextLinkExample />
     </>
   )
 }
