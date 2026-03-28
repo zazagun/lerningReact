@@ -14,8 +14,11 @@ function InfoProcess() {
                 return response.json()
             })
             .then((data) => {
-                console.log("PID from server:", data.pid)
-                setPid(data.pid)
+                let pidInNow = data.pid
+                if(pidInNow !== pid){
+                    setPid(data.pid)
+                    console.log("PID from server:", data.pid)
+                }
             })
             .catch((error) => {
                 console.error("Error fetching PID:", error)
@@ -23,7 +26,7 @@ function InfoProcess() {
         }, 2000)
 
         return () => clearInterval(intervalId)
-    }, [])
+    }, [pid])
 
   return (
     <Container>
