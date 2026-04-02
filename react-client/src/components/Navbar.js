@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 
-function TextLinkExample() {
+const NavigBar =() => {
   return (
     <Navbar className="bg-body-tertiary">
       <Container>
@@ -17,4 +17,4 @@ function TextLinkExample() {
   );
 }
 
-export default TextLinkExample
+export default NavigBar
